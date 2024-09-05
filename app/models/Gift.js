@@ -3,7 +3,7 @@ export class Gift {
     this.tag = data.tag || '';
     this.url = data.url || '';
     this.opened = data.opened || false;
-    this.creatorId = data.creatorId || null;
-    this.profileIdsOpened = data.profileIdsOpened || [];
+    this.creatorId = data.creatorId;
+    this.profileIdsOpened = data.profileIdsOpened;
   }
 }
