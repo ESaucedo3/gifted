@@ -1,7 +1,7 @@
-import {AppState} from '../AppState.js';
-import {giftsService} from '../services/GiftsService.js';
-import {Pop} from '../utils/Pop.js';
-import {setHTML} from '../utils/Writer.js';
+import { AppState } from '../AppState.js';
+import { giftsService } from '../services/GiftsService.js';
+import { Pop } from '../utils/Pop.js';
+import { setHTML } from '../utils/Writer.js';
 
 export class GiftsController {
   constructor() {
@@ -21,11 +21,13 @@ export class GiftsController {
 
   async openGift(giftId) {
     try {
-      console.log('Received', giftId);
+      await giftsService.openGift(giftId)
+
     } catch (e) {
       Pop.error(e);
       console.error(e);
     }
+
   }
 
   drawGifts() {
